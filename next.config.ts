@@ -6,10 +6,10 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: [], // Add allowed external image domains here if needed
+    domains: [],
+    unoptimized: true, // Disable image optimization for static export
   },
-  output: "export", // Enables static export for production
-  // Add more production optimizations as needed
+  output: "export",
 };
 
 export default nextConfig;
