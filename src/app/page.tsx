@@ -2,102 +2,139 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground p-8">
+      <main className="w-full max-w-3xl bg-white dark:bg-[#181818] rounded-lg shadow-md p-8">
+        <h1 className="text-3xl font-bold mb-4 text-center">
+          Assignment: Build a Functional WordPress Website
+        </h1>
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Objective</h2>
+          <p className="text-gray-700 dark:text-gray-300">
+            Design and develop a fully functional WordPress website that
+            includes essential pages, design elements, and functionality based
+            on a specific theme (e.g., personal blog, portfolio, small business,
+            NGO, or fictional company).
+          </p>
+        </section>
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Instructions</h2>
+          <ol className="list-decimal list-inside space-y-2 text-gray-800 dark:text-gray-200">
+            <li>
+              Choose a purpose for your website (Personal Blog, Portfolio,
+              Business, NGO, or Online Resume/CV).
+            </li>
+            <li>
+              Install WordPress and select a free theme from the WordPress theme
+              repository.
+            </li>
+            <li>
+              Install at least 3 useful plugins (e.g., SEO, contact form,
+              security).
+            </li>
+            <li>
+              Create the following pages:
+              <ul className="list-disc list-inside ml-6">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services or Projects (based on your site type)</li>
+                <li>Blog (with at least 2 blog posts)</li>
+                <li>Contact (with a working contact form)</li>
+              </ul>
+            </li>
+            <li>
+              Customize the header, footer, sidebar, logo, favicon, menu,
+              colors, and fonts.
+            </li>
+            <li>Ensure the contact form works and add social media links.</li>
+            <li>Install and configure a backup or security plugin.</li>
+            <li>
+              <span className="font-semibold">Bonus:</span> Add an image
+              gallery, video embed, or a simple e-commerce page.
+            </li>
+            <li>
+              Submit a 1-page document explaining your site’s purpose,
+              theme/plugins used, and any challenges faced.
+            </li>
+          </ol>
+        </section>
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Assessment Criteria</h2>
+          <table className="w-full text-left border border-gray-300 dark:border-gray-700 mb-4">
+            <thead>
+              <tr className="bg-gray-100 dark:bg-gray-800">
+                <th className="p-2 border-b border-gray-300 dark:border-gray-700">
+                  Criteria
+                </th>
+                <th className="p-2 border-b border-gray-300 dark:border-gray-700">
+                  Marks
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  Content Completeness (pages, posts, menu)
+                </td>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  20
+                </td>
+              </tr>
+              <tr>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  Design and Layout
+                </td>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  20
+                </td>
+              </tr>
+              <tr>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  Use of Plugins & Functionality
+                </td>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  20
+                </td>
+              </tr>
+              <tr>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  Customization and Branding
+                </td>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  20
+                </td>
+              </tr>
+              <tr>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  Documentation & Explanation
+                </td>
+                <td className="p-2 border-b border-gray-200 dark:border-gray-700">
+                  10
+                </td>
+              </tr>
+              <tr>
+                <td className="p-2">Creativity & Effort</td>
+                <td className="p-2">10</td>
+              </tr>
+              <tr className="font-bold">
+                <td className="p-2">Total</td>
+                <td className="p-2">100</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="text-gray-700 dark:text-gray-300">
+            <span className="font-semibold">Submission Deadline:</span> Tuesday,
+            3rd June 2025
+          </p>
+        </section>
+        <div className="mt-8 flex justify-center">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/submission"
+            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Go to Submission Page
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
